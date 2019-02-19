@@ -9,5 +9,15 @@
 <body>
 <h1>Server Running!</h1>
 <h1>Another test</h1>
+<a href="HelloWorld">Click Here!</a>
+<a href="Booking">Book!</a>
+
+----------
+
+<form action="HelloWorld" method="post">
+Whats Your Name?
+<input type="text" name="name">
+<input type="submit">
+</form>
 </body>
 </html>
