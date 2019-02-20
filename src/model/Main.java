@@ -1,12 +1,19 @@
 package model;
 
-import database.DatabaseConnection;
+import database.AddListingsToDB;
 
 public class Main {
 
 	public static void main(String[] args) {
-		DatabaseConnection dbConnection = new DatabaseConnection();
-		dbConnection.connect();
-		dbConnection.disconnect();
+		AddListingsToDB addToDB = new AddListingsToDB();
+		
+		//connect to db
+		addToDB.connect();
+		 
+		//add listing into database
+		addToDB.insertListing("test place", "Is a lovely place", 100);
+		
+		//disconnect from db
+		addToDB.disconnect();
 	}
 }
