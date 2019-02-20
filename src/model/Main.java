@@ -1,9 +1,12 @@
 package model;
 
+import database.DatabaseConnection;
+
 public class Main {
 
 	public static void main(String[] args) {
-		Dog spot = new Dog();
-		spot.bark();
+		DatabaseConnection dbConnection = new DatabaseConnection();
+		dbConnection.connect();
+		dbConnection.disconnect();
 	}
 }
