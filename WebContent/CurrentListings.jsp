@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sign up/Log in</title>
+<title>Your current listings</title>
 </head>
 <body>
-<h1>Holding page for log in</h1>
-<a href="HomePage">Click to go to home</a>
+<h1>Holding back for a looking at current listings</h1>
+<a href="HomePage">back</a>
 </body>
 </html>

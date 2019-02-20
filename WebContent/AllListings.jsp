@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Index 2</title>
+<title>Insert title here</title>
 </head>
 <body>
-<h1>Hello ${requestScope['user'].getName()}</h1>
+<h1>Holding back for a looking at all listings</h1>
+<a href="HomePage">back</a>
 </body>
 </html>
