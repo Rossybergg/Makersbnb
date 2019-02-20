@@ -1,0 +1,23 @@
+body {
+	background-image: url("./images/bg.jpg");
+}
+
+#title {
+	color: red;
+	font-size: 30px;
+}
+
+.listingsContainer {
+	position: absolute;
+	background-color: white;
+	height: 500px;
+	width: 400px;
+	border-radius: 5%;
+}
+
+.hostLinks {
+	position: absolute;
+	right: 10px;
+	color: white;
+	font-size: 20px;
+}

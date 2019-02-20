@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Index 2</title>
+<title>New listing</title>
 </head>
 <body>
-<h1>Hello ${requestScope['user'].getName()}</h1>
+<h1>Holding back for a new listing</h1>
+<a href="HomePage">back</a>
 </body>
 </html>
