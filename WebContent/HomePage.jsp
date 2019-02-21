@@ -1,3 +1,6 @@
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ page import="java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,7 +17,6 @@
 </div>
 
 <div class="listingsContainer">
-<a href="AllListings">View available listings</a>
 </div>
 
 </body>
