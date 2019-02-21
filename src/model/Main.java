@@ -1,19 +1,19 @@
 package model;
 
-import database.AddListingsToDB;
+import database.ShowListingsFromDB;
 
 public class Main {
 
 	public static void main(String[] args) {
-		AddListingsToDB addToDB = new AddListingsToDB();
+		ShowListingsFromDB showToDB = new ShowListingsFromDB();
 		
 		//connect to db
-		addToDB.connect();
+		showToDB.connect();
 		 
 		//add listing into database
-		addToDB.insertListing("test place", "Is a lovely place", 100);
+		showToDB.displayListings();
 		
 		//disconnect from db
-		addToDB.disconnect();
+		showToDB.disconnect();
 	}
 }
