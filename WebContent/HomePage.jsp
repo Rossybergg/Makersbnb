@@ -12,6 +12,7 @@
 </head>
 <body>
 <h1>Welcome to MakersBnB</h1>
+${listingsArray}
 <div class="hostLinks">
 <a href="NewListing">Add a new listing</a> <a href="CurrentListings">View your current listings</a>
 </div>

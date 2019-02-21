@@ -33,7 +33,7 @@ public class HomePage extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		ShowListingsFromDB showToDB = new ShowListingsFromDB();
-		
+
 		//connect to db
 		showToDB.connect();
 		showToDB.connect();
@@ -42,13 +42,11 @@ public class HomePage extends HttpServlet {
 		List<String> listingsArray = showToDB.displayListings();
 		
 		request.setAttribute("listingsArray", listingsArray);
-		System.out.print(listingsArray);
-		
 		
 		//disconnect from db
 		showToDB.disconnect();
 		
-		response.sendRedirect("HomePage.jsp");
+		request.getRequestDispatcher("HomePage.jsp").forward(request, response);
 	}
 	
 	
