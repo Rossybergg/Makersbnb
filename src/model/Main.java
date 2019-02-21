@@ -11,7 +11,7 @@ public class Main {
 		addToDB.connect();
 		 
 		//add listing into database
-		addToDB.insertListing("test place", "Is a lovely place", 100);
+		addToDB.insertListing("testdsfsd place", "Is a losdfsdvely place", 1001);
 		
 		//disconnect from db
 		addToDB.disconnect();

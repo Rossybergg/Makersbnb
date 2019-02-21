@@ -11,13 +11,14 @@ public class AddListingsToDB extends DatabaseConnection {
 		try {
 			PreparedStatement listing = dbConnection.prepareStatement("INSERT INTO listings ("
 					+ "name, description, price)"
-					+ "VALUES (?,?,?)");
+					+ " VALUES (?,?,?)");
 			
 				listing.setString(1, name);
 				listing.setString(2, description);
 				listing.setInt(3, price);
 				listing.executeUpdate();
 				listing.close();
+				System.out.println(listing);
 				
 		} catch (SQLException e) {
 			e.printStackTrace();
