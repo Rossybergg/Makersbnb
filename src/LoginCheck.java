@@ -1,5 +1,7 @@
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,6 +31,7 @@ public class LoginCheck extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+
 	}
 
 	/**
@@ -42,7 +45,10 @@ public class LoginCheck extends HttpServlet {
 		if (uname.equals("testuser") && password.equals("testpassword")) {
 			response.sendRedirect("HomePage.jsp");
 		} else {
-			response.sendRedirect("LoginError.jsp");
+			request.setAttribute("failmessage",
+					"The username and password you entered did not match our records. Please double-check and try again.");
+			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+			rd.include(request, response);
 		}
 	}
 
