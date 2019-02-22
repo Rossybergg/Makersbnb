@@ -6,7 +6,8 @@ public class DatabaseConnection {
 	
 	/* -01 Variables */
 	String jdbUrl = "jdbc:postgresql://localhost:5432/makersbnb";
-	String username = "rosshunter";
+
+	String username = "sauleguzyte";
 	String password = "";
 	
 	/* -02 Database variables */

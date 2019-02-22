@@ -6,11 +6,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.jms.ServerSession;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import database.ShowListingsFromDB;
 
@@ -42,6 +44,11 @@ public class HomePage extends HttpServlet {
 		// connect to db
 		showToDB.connect();
 		showToDB.connect();
+		
+		HttpSession session = request.getSession();
+		request.setAttribute("username", session.getAttribute("username"));
+		
+		System.out.println(session.getAttribute("username"));
 
 		// add listing into database
 		HashMap<String, String> listingsArray = showToDB.displayTitleListings();
