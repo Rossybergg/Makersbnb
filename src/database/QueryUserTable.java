@@ -57,4 +57,24 @@ public class QueryUserTable extends DatabaseConnection {
 		return actualPassword.equals(password);
 	}
 	
+	// Connects to database and adds row for user
+	public void addUser(String first_name, String surname, String username, String password) {
+		this.connect();
+		this.connect();
+		
+		try {
+			String sql = "INSERT INTO 'public'.'users' ('username', 'first_name', 'surname', 'password') VALUES ('"
+					+ first_name + "', '"
+					+ surname + "', '"
+					+ username + "', '"
+					+ surname +"');";
+			dbConnection.prepareStatement(sql);
+		}
+		
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		this.disconnect();
+	}
+	
 }
