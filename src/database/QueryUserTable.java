@@ -59,22 +59,19 @@ public class QueryUserTable extends DatabaseConnection {
 	
 	// Connects to database and adds row for user
 	public void addUser(String first_name, String surname, String username, String password) {
-		this.connect();
-		this.connect();
 		
 		try {
-			String sql = "INSERT INTO 'public'.'users' ('username', 'first_name', 'surname', 'password') VALUES ('"
-					+ first_name + "', '"
-					+ surname + "', '"
-					+ username + "', '"
-					+ surname +"');";
-			dbConnection.prepareStatement(sql);
+			String sql = "insert into users (first_name, surname, username, password) values ('" + first_name + "', '"+ surname + "', '"+ username + "', '"+ surname +"');";
+			System.out.println(sql);
+			PreparedStatement users = dbConnection.prepareStatement(sql);
+			users.executeQuery();
+			
 		}
 		
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
-		this.disconnect();
+
 	}
 	
 }

@@ -51,11 +51,10 @@
 					<form action="./signup.jsp" method="post">
 					 <input type="submit"
 						value="Signup">
+						</form>
 				</div>
-			</form>
+			
 		</div>
-	</div>
-</div>
 
 
 
