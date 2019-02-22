@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MakersBnb: ${session.getAttribute("username")}</title>
+<title>MakersBnb: ${username}</title>
 <script type="text/javascript">
 	function background() {
 		var BG = Math.floor(Math.random() * 4);
