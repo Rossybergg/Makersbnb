@@ -33,6 +33,37 @@
 <img id="loginLogo" src="./images/logo_black.png">
 
 <div class="SignupContainer">
-<div id="signupbox"></div>
+<div id="signupbox">
+<div id="loginTitle">
+				<b>Signup to Makers BnB</b>
+			</div>
+			<br>
+			<div id="loginSubTitle">Please enter your details below to complete your signup.</div>
+			<br>
+<form action="signup" method="post" id="signupTable">
+<table>
+					<tr>
+						<td><b>User Name</b></td>
+						<td><b>Password</b></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="uname"></td>
+						<td><input type="password" name="password"></td>
+					</tr>
+					<tr>
+						<td><b>First Name</b></td>
+						<td><b>Surname</b></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="fname"></td>
+						<td><input type="password" name="sname"></td>
+					</tr>
+				</table>
+				<div id="signupButtons">
+					<input type="submit"
+						value="Signup">
+						</form>
+				</div>
+</div>
 </div>
 </html>

@@ -165,9 +165,16 @@ input[type=submit]:hover {
 	left: 35px;
 }
 
+#signupTable {
+	position: absolute;
+	font-size: 15px;
+	top: 160px;
+	left: 35px;
+}
+
 #loginButtons {
 	position: absolute;
-	top: 160px;
+	top: 170px;
 	width: 100%;
 	opacity: 1;
 }

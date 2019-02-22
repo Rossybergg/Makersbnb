@@ -47,7 +47,9 @@
 					</tr>
 				</table>
 				<div id="loginButtons">
-					<input type="submit" value="Login"> <input type="submit"
+					<input type="submit" value="Login"></form>
+					<form action="signup" method="post">
+					 <input type="submit"
 						value="Signup">
 				</div>
 			</form>
