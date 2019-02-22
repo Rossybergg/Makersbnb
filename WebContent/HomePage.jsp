@@ -40,7 +40,7 @@
 <div class="listingsContainer">
 
 <c:forEach items="${listingsArray}" var="listing">
-   <c:out value="${listing.value}"/>
+   <a href=""><c:out value="${listing.value}"/></a>
    <br>
 </c:forEach> 
 
