@@ -50,7 +50,7 @@ public class LoginCheck extends HttpServlet {
 		if (qut.isUsernameValid(uname)) {
 			if (qut.isPasswordValid(uname, password)) {
 				qut.disconnect();
-				response.sendRedirect("HomePage.jsp");
+				response.sendRedirect("HomePage");
 			} else {
 				request.setAttribute("failmessage",
 						"The username and password you entered did not match our records. Please double-check and try again.");

@@ -31,26 +31,25 @@ public class ShowListingsFromDB extends DatabaseConnection {
 		return listingsWithInfo;
 	}
 
-	public  HashMap<String, String> displayTitleListings () {
-		
-		HashMap<String, String> listingsTitles = new HashMap<String,String>();
-		
+	public HashMap<String, String> displayTitleListings() {
+
+		HashMap<String, String> listingsTitles = new HashMap<String, String>();
+
 		try {
 			String sql = "SELECT * FROM listings";
 			PreparedStatement listings = dbConnection.prepareStatement(sql);
 			ResultSet all_listings = listings.executeQuery();
-			
+
 			while (all_listings.next()) {
-				listingsTitles.put(all_listings.getString(1), all_listings.getString(2));		
+				listingsTitles.put(all_listings.getString(1), all_listings.getString(2));
 			}
 		}
-		
+
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return listingsTitles;
-		
-		
+
 	}
 
 	public List<String> findFromId(String id) {
