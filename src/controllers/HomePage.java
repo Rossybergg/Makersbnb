@@ -5,6 +5,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -49,6 +50,10 @@ public class HomePage extends HttpServlet {
 		
 		request.setAttribute("listingsArray", listingsArray);
 		System.out.println(listingsArray);
+		
+		List<String> listing = showToDB.findFromId(request.getParameter("id"));
+		request.setAttribute("listing", listing);
+		System.out.println(listing);
 
 		// disconnect from db
 		showToDB.disconnect();

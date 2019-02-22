@@ -53,12 +53,12 @@ public class ShowListingsFromDB extends DatabaseConnection {
 		
 	}
 
-	public void findFromTitle(String title) {
+	public List<String> findFromId(String id) {
 
 		List<String> listing = new ArrayList<String>();
 
 		try {
-			String sql = "SELECT name, description, price FROM listings WHERE name = \"" + title + "\"";
+			String sql = "SELECT * FROM listings WHERE id = " + id;
 			PreparedStatement listings = dbConnection.prepareStatement(sql);
 			ResultSet all_listings = listings.executeQuery();
 
@@ -72,7 +72,7 @@ public class ShowListingsFromDB extends DatabaseConnection {
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println(listing);
+		return listing;
 	}
 
 }

@@ -37,16 +37,20 @@
 <a href="NewListing">Add a new listing</a> <a href="CurrentListings">View your current listings</a>
 </div>
 
-<div class="listingsContainer">
+<div class="titleContainer">
 
 <c:forEach items="${listingsArray}" var="listing">
-   <c:out value="${listing.value}"/>
+   <a href="HomePage?id=${listing.key}"><c:out value="${listing.value}"/></a>
    <br>
 </c:forEach> 
 
 </div>
 
-
+<div class="listingContainer">
+<h1>${listing[0]}</h1>
+<h3>Description: ${listing[1]}</h3>
+<h3>Price: ${listing[2]}</h3>
+</div>
 
 </body>
 </html>
