@@ -1,4 +1,70 @@
 body {
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: "lucida grande", sans-serif;
+	color: rgb(72, 72, 72);
+}
+
+#Video {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	max-width: 1300px;
+	max-height: auto;
+	opacity: 1;
+}
+
+input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	outline: none;
+	font-size: 15px;
+}
+
+input[type=text]:focus {
+	border: 2px solid #555;
+}
+
+input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	outline: none;
+	font-size: 15px;
+}
+
+input[type=password]:focus {
+	border: 2px solid #555;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	width: 100%;
+	font-size: 15px;
+	opacity: 1;
+}
+
+input[type=submit]:hover {
+	background-color: rgb(72, 72, 72);
+	transition: 0.5s;
 	 background-repeat: no-repeat;
   	 -webkit-background-size: cover;
  	 -moz-background-size: cover;
@@ -24,4 +90,64 @@ body {
 	right: 10px;
 	color: white;
 	font-size: 20px;
+}
+
+.loginContainer {
+	position: absolute;
+	top: 125px;
+	right: 125px;
+}
+
+#loginfail {
+	position: absolute;
+	color: red;
+	top: 300px;
+	left: 35px;
+}
+
+#loginbox {
+	background-color: white;
+	border-radius: 1%;
+	height: 500px;
+	width: 500px;
+	opacity: 0.85;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+#loginTitle {
+	position: absolute;
+	color: rgb(72, 72, 72);
+	font-size: 30px;
+	top: 20px;
+	left: 20px;
+}
+
+#loginSubTitle {
+	position: absolute;
+	color: rgb(72, 72, 72);
+	font-size: 15px;
+	top: 70px;
+	left: 20px;
+}
+
+#loginTable {
+	position: absolute;
+	font-size: 15px;
+	top: 200px;
+	left: 35px;
+}
+
+#loginButtons {
+	position: absolute;
+	top: 160px;
+	width: 100%;
+	opacity: 1;
+}
+
+#loginLogo {
+	position: absolute;
+	opacity: 0.85;
+	max-width: 100px;
+	height: auto;
 }
