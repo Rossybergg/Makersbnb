@@ -56,7 +56,7 @@
 					</tr>
 					<tr>
 						<td><input type="text" name="fname"></td>
-						<td><input type="password" name="sname"></td>
+						<td><input type="text" name="sname"></td>
 					</tr>
 				</table>
 				<div id="signupButtons">

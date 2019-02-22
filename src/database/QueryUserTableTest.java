@@ -12,8 +12,10 @@ public class QueryUserTableTest extends QueryUserTable {
 		QueryUserTable qt = new QueryUserTable();
 		qt.connect();
 		
+		qt.addUser("s","s","s","s");
+		
 		// db retrieves dummy username from db table
-		assertEquals("user", qt.allUsers().get(0));
+		assertEquals("test-user", qt.allUsers().get(0));
 		
 		// isUsername returns true if argument found in db
 		assertEquals(true, qt.isUsernameValid("user"));
@@ -26,6 +28,7 @@ public class QueryUserTableTest extends QueryUserTable {
 		
 		// isPasswordValid false when incorrect password
 		assertEquals(false, qt.isPasswordValid("user", "badPassword"));
+//		
 		
 		qt.disconnect();
 	}
