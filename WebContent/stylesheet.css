@@ -65,6 +65,11 @@ input[type=button], input[type=submit], input[type=reset] {
 input[type=submit]:hover {
 	background-color: rgb(72, 72, 72);
 	transition: 0.5s;
+	 background-repeat: no-repeat;
+  	 -webkit-background-size: cover;
+ 	 -moz-background-size: cover;
+ 	 -o-background-size: cover;
+ 	 background-size: cover;
 }
 
 #title {
@@ -75,8 +80,8 @@ input[type=submit]:hover {
 .listingsContainer {
 	position: absolute;
 	background-color: white;
-	height: 500px;
-	width: 400px;
+	height: 1000px;
+	width: 600px;
 	border-radius: 5%;
 }
 
