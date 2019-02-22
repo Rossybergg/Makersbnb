@@ -8,13 +8,17 @@ body {
 	color: rgb(72, 72, 72);
 }
 
-#Video {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	max-width: 1300px;
-	max-height: auto;
-	opacity: 1;
+.videoInsert {
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;  
+    height: auto; 
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
 }
 
 input[type=text] {
@@ -65,11 +69,6 @@ input[type=button], input[type=submit], input[type=reset] {
 input[type=submit]:hover {
 	background-color: rgb(72, 72, 72);
 	transition: 0.5s;
-	 background-repeat: no-repeat;
-  	 -webkit-background-size: cover;
- 	 -moz-background-size: cover;
- 	 -o-background-size: cover;
- 	 background-size: cover;
 }
 
 #title {
@@ -80,8 +79,8 @@ input[type=submit]:hover {
 .listingsContainer {
 	position: absolute;
 	background-color: white;
-	height: 1000px;
-	width: 600px;
+	height: 500px;
+	width: 400px;
 	border-radius: 5%;
 }
 
