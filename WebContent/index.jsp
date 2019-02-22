@@ -48,7 +48,7 @@
 				</table>
 				<div id="loginButtons">
 					<input type="submit" value="Login"></form>
-					<form action="signup" method="post">
+					<form action="./signup.jsp" method="post">
 					 <input type="submit"
 						value="Signup">
 				</div>
