@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import database.AddListingsToDB;
 
@@ -43,7 +44,9 @@ public class NewListing extends HttpServlet {
 		// parameters from form
 		String name = request.getParameter("name");
 		String description = request.getParameter("description");
-		String price = request.getParameter("price");
+		String price = request.getParameter("price");	
+		HttpSession session = request.getSession();
+		String username = (String) session.getAttribute("username");
 		
 		//create new database object
 		AddListingsToDB addToDB = new AddListingsToDB();
@@ -56,7 +59,7 @@ public class NewListing extends HttpServlet {
 		System.out.println("connected");
 
 		//add listing into database
-		addToDB.insertListing(name, description, Integer.parseInt(price));
+		addToDB.insertListing(name, description, Integer.parseInt(price), username);
 	
 		//disconnect from db
 		addToDB.disconnect();
