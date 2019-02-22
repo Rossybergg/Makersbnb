@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import database.QueryUserTable;
+
 /**
  * Servlet implementation class LoginCheck
  */
@@ -42,14 +44,35 @@ public class LoginCheck extends HttpServlet {
 			throws ServletException, IOException {
 		String uname = request.getParameter("uname");
 		String password = request.getParameter("password");
-		if (uname.equals("testuser") && password.equals("testpassword")) {
-			response.sendRedirect("HomePage.jsp");
+		QueryUserTable qut = new QueryUserTable();
+		qut.connect();
+		qut.connect();
+		if (qut.isUsernameValid(uname)) {
+			if (qut.isPasswordValid(uname, password)) {
+				qut.disconnect();
+				response.sendRedirect("HomePage.jsp");
+			} else {
+				request.setAttribute("failmessage",
+						"The username and password you entered did not match our records. Please double-check and try again.");
+				RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+				qut.disconnect();
+				rd.include(request, response);
+			}
 		} else {
 			request.setAttribute("failmessage",
 					"The username and password you entered did not match our records. Please double-check and try again.");
 			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+			qut.disconnect();
 			rd.include(request, response);
 		}
+//		if (uname.equals("testuser") && password.equals("testpassword")) {
+//			response.sendRedirect("HomePage.jsp");
+//		} else {
+//			request.setAttribute("failmessage",
+//					"The username and password you entered did not match our records. Please double-check and try again.");
+//			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+//			rd.include(request, response);
+//		}
 	}
 
 }
