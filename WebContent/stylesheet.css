@@ -77,11 +77,21 @@ input[type=submit]:hover {
 	font-size: 30px;
 }
 
-.listingsContainer {
+.titleContainer {
 	position: absolute;
 	background-color: white;
 	height: 1000px;
 	width: 600px;
+	border-radius: 5%;
+}
+
+.listingContainer {
+	position: absolute;
+	top: 130px;
+	right: 40px;
+	background-color: white;
+	height: 400px;
+	width: 300px;
 	border-radius: 5%;
 }
 

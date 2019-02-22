@@ -16,7 +16,7 @@ public class Main {
 		showToDB.connect();
 		 
 		//add listing into database
-		showToDB.displayTitleListings();
+		showToDB.findFromId("1");
 		
 		//disconnect from db
 		showToDB.disconnect();
