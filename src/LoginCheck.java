@@ -65,14 +65,6 @@ public class LoginCheck extends HttpServlet {
 			qut.disconnect();
 			rd.include(request, response);
 		}
-//		if (uname.equals("testuser") && password.equals("testpassword")) {
-//			response.sendRedirect("HomePage.jsp");
-//		} else {
-//			request.setAttribute("failmessage",
-//					"The username and password you entered did not match our records. Please double-check and try again.");
-//			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-//			rd.include(request, response);
-//		}
 	}
 
 }
