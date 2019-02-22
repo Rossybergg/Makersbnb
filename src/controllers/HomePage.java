@@ -1,7 +1,10 @@
 package controllers;
 
 import java.io.IOException;
-import java.util.List;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Hashtable;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,45 +20,48 @@ import database.ShowListingsFromDB;
 @WebServlet("/HomePage")
 public class HomePage extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public HomePage() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public HomePage() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+
 		ShowListingsFromDB showToDB = new ShowListingsFromDB();
 
-		//connect to db
+		// connect to db
 		showToDB.connect();
 		showToDB.connect();
-		 
-		//add listing into database
-		List<String> listingsArray = showToDB.displayListings();
+
+		// add listing into database
+		HashMap<String, String> listingsArray = showToDB.displayTitleListings();
+
 		
 		request.setAttribute("listingsArray", listingsArray);
-		
-		//disconnect from db
+		System.out.println(listingsArray);
+
+		// disconnect from db
 		showToDB.disconnect();
-		
+
 		request.getRequestDispatcher("HomePage.jsp").forward(request, response);
 	}
-	
-	
-		
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

@@ -1,5 +1,10 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Hashtable;
+import java.util.List;
+
 import database.ShowListingsFromDB;
 
 public class Main {
@@ -11,9 +16,12 @@ public class Main {
 		showToDB.connect();
 		 
 		//add listing into database
-		showToDB.displayListings();
+		showToDB.displayTitleListings();
 		
 		//disconnect from db
 		showToDB.disconnect();
+		
+
+		
 	}
 }
