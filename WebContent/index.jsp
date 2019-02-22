@@ -10,9 +10,6 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <title>MakersBnB</title>
 </head>
-<video autoplay muted loop id="Video">
-	<source src="./videos/sunset.mp4" type="video/mp4">
-</video>
 <body onload="loginFailCheck()">
 	<script>
 		function loginFailCheck() {
@@ -21,10 +18,13 @@
 			}
 		}
 	</script>
+<div class="wrapper">
+  <video autoplay muted loop class="videoInsert">
+  <source src="./videos/sunset.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+ </video>
+</div>
 	<img id="loginLogo" src="./images/logo_white.png">
-	<div id="title">Holding page for log in</div>
-	<a href="HomePage">Click to go to home</a>
-
 	<div class="loginContainer">
 		<div id="loginbox">
 			<div id="loginTitle">
@@ -53,7 +53,7 @@
 			</form>
 		</div>
 	</div>
-
+</div>
 
 
 
